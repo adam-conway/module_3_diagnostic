@@ -6,12 +6,12 @@ class StationService
   def data
     JSON.parse(response.body, symbolize_names: true)
   end
-  
+
 private
   attr_reader :zip
 
   def response
-    Faraday.get "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=#{zip}&limit=10&api_key=C4jwhpTWmqYSKzLj5V6WvlPUsoPrWwFptOCknaIA&format=JSON"
+    Faraday.get "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=#{zip}&limit=10&api_key=#{ENV['NREL_API_KEY']}&format=JSON"
   end
 
 
