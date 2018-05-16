@@ -7,6 +7,14 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # require 'webmock/rspec'
 # WebMock.disable_net_connect!(:allow_localhost => true)
+
+# require 'webmock'
+# require 'vcr'
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.filter_sensitive_data(ENV['NREL_API_KEY']) { 'NREL_API_KEY' }
+#   config.hook_into :webmock
+# end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
