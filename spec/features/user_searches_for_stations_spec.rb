@@ -10,6 +10,7 @@ feature "User can search for altnerative fuel stations" do
 
     expect(current_path).to eq('/search')
     expect(page).to have_css('.station')
+
     within(first('.station')) do
       expect(page).to have_css('.name')
       expect(page).to have_css('.address')
