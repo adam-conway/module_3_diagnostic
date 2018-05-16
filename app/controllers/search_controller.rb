@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @stations = StationQuery.new(10).stations
+    @stations = StationQuery.new(80220).stations
   end
 end
