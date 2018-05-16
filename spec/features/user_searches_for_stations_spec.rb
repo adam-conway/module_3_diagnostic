@@ -4,7 +4,8 @@ feature "User can search for altnerative fuel stations" do
   scenario "searches within search form" do
     visit "/"
 
-    fill_in :search, with: "80203"
+    # save_and_open_page
+    fill_in :q, with: "80203"
     click_on "Locate"
 
     expect(current_path).to eq('/search')
