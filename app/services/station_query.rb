@@ -4,7 +4,8 @@ class StationQuery
   end
 
   def stations
-    raw_stations.each do |station|
+    raw_stations.map do |station|
+      Station.new(station)
     end
   end
 
@@ -12,6 +13,6 @@ class StationQuery
     attr_reader :zip
 
     def raw_stations
-      StationService.new(zip).data
+      StationService.new(zip).data[:fuel_stations]
     end
 end
