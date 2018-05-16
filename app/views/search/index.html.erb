@@ -1,14 +1,25 @@
-<% @stations.each do |station| %>
+<% @stations.each_with_index do |station, index| %>
   <div class='station'>
+    <h1>Station #<%= index + 1 %></h1>
     <div class='name'>
+      <h4>Station Name</h4>
+      <%= station.name %>
     </div>
     <div class='address'>
+      <h4>Station Address</h4>
+      <%= station.address %>
     </div>
     <div class='fuel_types'>
+      <h4>Station Fuel Types</h4>
+      <%= station.fuel_types %>
     </div>
     <div class='distance'>
+      <h4>Station Distance from Zip</h4>
+      <%= station.distance %>
     </div>
     <div class='access_times'>
+      <h4>Station Access Times</h4>
+      <%= station.access_times %>
     </div>
   </div>
 <% end %>
